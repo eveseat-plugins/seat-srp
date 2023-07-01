@@ -8,7 +8,7 @@
    type = "text/css"
    href = "https://snoopy.crypta.tech/snoopy/seat-srp-approval.css" />
 
-<link rel="stylesheet" type="text/css" href="{{ asset('web/css/denngarr-srp-hook.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('web/css/cryptatech-srp-hook.css') }}" />
 @endpush
 
 @section('full')

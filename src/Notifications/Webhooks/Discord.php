@@ -1,6 +1,6 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Notifications\Webhooks;
+namespace CryptaTech\Seat\SeatSrp\Notifications\Webhooks;
 
 use GuzzleHttp\Client as Requests;
 
@@ -8,11 +8,11 @@ class Discord
 {
     public function post($content)
     {
-        $url = setting('denngarr_seat_srp_webhook_url', true);
+        $url = setting('cryptatech_seat_srp_webhook_url', true);
         if(! $url){
             return [500, 'SRP DISCORD WEBHOOK URL is not defined in SRP Settings'];
         }
-        $srp_role_mention = setting('denngarr_seat_srp_mention_role', true);
+        $srp_role_mention = setting('cryptatech_seat_srp_mention_role', true);
         $headers = [
             'headers' => ['Content-Type' => 'application/json'],
             'json' => [

@@ -5,9 +5,9 @@
  * Time: 19:51.
  */
 
-namespace Denngarr\Seat\SeatSrp\Commands;
+namespace CryptaTech\Seat\SeatSrp\Commands;
 
-use Denngarr\Seat\SeatSrp\Models\Sde\InvFlag;
+use CryptaTech\Seat\SeatSrp\Models\Sde\InvFlag;
 use Illuminate\Console\Command;
 
 class FlagShim extends Command

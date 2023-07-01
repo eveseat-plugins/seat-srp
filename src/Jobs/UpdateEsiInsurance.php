@@ -5,9 +5,9 @@
  * Time: 19:57.
  */
 
-namespace Denngarr\Seat\SeatSrp\Jobs;
+namespace CryptaTech\Seat\SeatSrp\Jobs;
 
-use Denngarr\Seat\SeatSrp\Models\Eve\Insurance;
+use CryptaTech\Seat\SeatSrp\Models\Eve\Insurance;
 use Seat\Eveapi\Jobs\EsiBase;
 
 class UpdateEsiInsurance extends EsiBase

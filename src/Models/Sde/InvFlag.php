@@ -5,7 +5,7 @@
  * Time: 15:13.
  */
 
-namespace Denngarr\Seat\SeatSrp\Models\Sde;
+namespace CryptaTech\Seat\SeatSrp\Models\Sde;
 
 use Illuminate\Database\Eloquent\Model;
 

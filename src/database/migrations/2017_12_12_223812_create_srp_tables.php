@@ -13,7 +13,7 @@ class CreateSrpTables extends Migration
      */
     public function up()
     {
-        Schema::create('seat_srp_srp', function (Blueprint $table) {
+        Schema::create('cryptatech_seat_srp_srp', function (Blueprint $table) {
             $table->integer('user_id');
             $table->string('character_name');
             $table->integer('kill_id');
@@ -33,6 +33,6 @@ class CreateSrpTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('seat_srp_srp');
+        Schema::dropIfExists('cryptatech_seat_srp_srp');
     }
 }

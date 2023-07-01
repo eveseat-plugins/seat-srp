@@ -1,6 +1,6 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Notifications\Channels;
+namespace CryptaTech\Seat\SeatSrp\Notifications\Channels;
 
 use Illuminate\Notifications\Notification;
 

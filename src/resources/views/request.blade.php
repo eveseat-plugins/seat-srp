@@ -202,7 +202,7 @@
 @stop
 
 @push('head')
-<link rel="stylesheet" type="text/css" href="{{ asset('web/css/denngarr-srp-hook.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('web/css/cryptatech-srp-hook.css') }}" />
 @endpush
 
 @push('javascript')

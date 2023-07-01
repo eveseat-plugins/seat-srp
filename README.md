@@ -3,9 +3,8 @@ A module for SeAT that tracks SRP requests
 
 This plugin write for [SeAT](https://github.com/eveseat/seat) is providing to your instance a way to manage your ship replacement program (SRP)
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/denngarr/seat-srp.svg?style=flat-square)]()
-[![Build Status](https://img.shields.io/travis/dysath/seat-srp.svg?style=flat-square)](https://travis-ci.org/dysath/seat-srp)
-[![License](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](https://raw.githubusercontent.com/dysath/seat-srp/master/LICENSE)
+[![Latest Stable Version](https://img.shields.io/packagist/v/cryptatech/seat-srp.svg?style=flat-square)]()
+[![License](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](https://raw.githubusercontent.com/crypta-tech/seat-srp/master/LICENSE)
 
 If you have issues with this, you can contact me on Eve as **Crypta Electrica**, or on email as 'crypta@crypta.tech'
 
@@ -15,7 +14,7 @@ In your seat directory (By default:  /var/www/seat), type the following:
 
 ```
 php artisan down
-composer require denngarr/seat-srp
+composer require cryptatech/seat-srp
 ```
 
 (You can skip this step if you are running 3.x)
@@ -28,7 +27,7 @@ After a successful installation, you can include the actual plugin by editing **
 ```
 add
 ```
-        Denngarr\Seat\SeatSrp\SrpServiceProvider::class
+        CryptaTech\Seat\SeatSrp\SrpServiceProvider::class
 ```
 
 and save the file.  Now you're ready to tell SeAT how to use the plugin:

@@ -1,9 +1,9 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Notifications;
+namespace CryptaTech\Seat\SeatSrp\Notifications;
 
-use Denngarr\Seat\SeatSrp\Notifications\Channels\DiscordChannel;
-use Denngarr\Seat\SeatSrp\Notifications\Webhooks\Discord;
+use CryptaTech\Seat\SeatSrp\Notifications\Channels\DiscordChannel;
+use CryptaTech\Seat\SeatSrp\Notifications\Webhooks\Discord;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Seat\Web\Models\User;

@@ -13,7 +13,7 @@ class CreateAdvancedRulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('denngarr_seat_srp_advrule', function (Blueprint $table) {
+        Schema::create('cryptatech_seat_srp_advrule', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('rule_type');
             $table->integer('type_id')->nullable()->unique();
@@ -35,6 +35,6 @@ class CreateAdvancedRulesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('denngarr_seat_srp_advrule');
+        Schema::drop('cryptatech_seat_srp_advrule');
     }
 }

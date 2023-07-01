@@ -5,9 +5,9 @@
  * Time: 20:42.
  */
 
-namespace Denngarr\Seat\SeatSrp\Models;
+namespace CryptaTech\Seat\SeatSrp\Models;
 
-use Denngarr\Seat\SeatSrp\Models\Sde\InvType;
+use CryptaTech\Seat\SeatSrp\Models\Sde\InvType;
 use Illuminate\Database\Eloquent\Model;
 use Seat\Eveapi\Models\Sde\InvGroup;
 
@@ -18,7 +18,7 @@ class AdvRule extends Model
 
     protected $primaryKey = 'id';
 
-    protected $table = 'denngarr_seat_srp_advrule';
+    protected $table = 'cryptatech_seat_srp_advrule';
 
     protected $fillable = [
         'rule_type', 'type_id', 'group_id', 'price_source', 'base_value', 'hull_percent', 'fit_percent', 'cargo_percent', 'deduct_insurance', 'srp_price_cap',

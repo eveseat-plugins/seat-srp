@@ -15,10 +15,10 @@ class MigrateSrpVersionFour extends Migration
     public function up()
     {
         // Duplicate the table into a backup for safekeeping
-        DB::statement('CREATE TABLE seat_srp_srp_three LIKE seat_srp_srp');
-        DB::statement('INSERT seat_srp_srp_three SELECT * FROM seat_srp_srp');
+        DB::statement('CREATE TABLE cryptatech_seat_srp_srp_three LIKE cryptatech_seat_srp_srp');
+        DB::statement('INSERT cryptatech_seat_srp_srp_three SELECT * FROM cryptatech_seat_srp_srp');
 
-        $entries = DB::table('seat_srp_srp')->get();
+        $entries = DB::table('cryptatech_seat_srp_srp')->get();
 
         foreach ($entries as $entry) {
             $new_id = DB::table('mig_groups')
@@ -36,7 +36,7 @@ class MigrateSrpVersionFour extends Migration
                 ->update(['user_id' => $new_id->new_user_id]);
         }
 
-        Schema::table('seat_srp_srp', function (Blueprint $table) {
+        Schema::table('cryptatech_seat_srp_srp', function (Blueprint $table) {
 
             $table->unsignedInteger('user_id')->change();
         });
@@ -49,7 +49,7 @@ class MigrateSrpVersionFour extends Migration
      */
     public function down()
     {
-        Schema::drop('seat_srp_srp');
-        Schema::rename('seat_srp_srp_three', 'seat_srp_srp');
+        Schema::drop('cryptatech_seat_srp_srp');
+        Schema::rename('cryptatech_seat_srp_srp_three', 'cryptatech_seat_srp_srp');
     }
 }

@@ -5,9 +5,9 @@
  * Time: 15:13.
  */
 
-namespace Denngarr\Seat\SeatSrp\Models\Sde;
+namespace CryptaTech\Seat\SeatSrp\Models\Sde;
 
-use Denngarr\Seat\SeatSrp\Models\Eve\Insurance;
+use CryptaTech\Seat\SeatSrp\Models\Eve\Insurance;
 use Illuminate\Database\Eloquent\Model;
 
 class InvType extends Model

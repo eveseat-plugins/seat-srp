@@ -13,7 +13,7 @@ class CreateSrpQuotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('denngarr_seat_quotes', function (Blueprint $table) {
+        Schema::create('cryptatech_seat_quotes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('killmail_id')->unique();
             $table->integer('user')->unsigned();
@@ -29,6 +29,6 @@ class CreateSrpQuotesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('denngarr_seat_quotes');
+        Schema::drop('cryptatech_seat_quotes');
     }
 }

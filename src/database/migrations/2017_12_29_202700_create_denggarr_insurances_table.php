@@ -1,7 +1,7 @@
 <?php
 
-use Denngarr\Seat\SeatSrp\Models\KillMail;
-use Denngarr\Seat\SeatSrp\Models\Sde\InvType;
+use CryptaTech\Seat\SeatSrp\Models\KillMail;
+use CryptaTech\Seat\SeatSrp\Models\Sde\InvType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -10,8 +10,8 @@ class CreateDenggarrInsurancesTable extends Migration
 {
     public function up()
     {
-        if (! Schema::hasTable('denngarr_srp_insurances')){
-            Schema::create('denngarr_srp_insurances', function (Blueprint $table) {
+        if (! Schema::hasTable('cryptatech_srp_insurances')){
+            Schema::create('cryptatech_srp_insurances', function (Blueprint $table) {
 
                 $table->bigInteger('type_id');
                 $table->string('name');
@@ -23,8 +23,8 @@ class CreateDenggarrInsurancesTable extends Migration
             });
         }
 
-        if (Schema::hasTable('seat_srp_srp') && ! Schema::hasColumn('seat_srp_srp', 'type_id')) {
-            Schema::table('seat_srp_srp', function (Blueprint $table) {
+        if (Schema::hasTable('cryptatech_seat_srp_srp') && ! Schema::hasColumn('cryptatech_seat_srp_srp', 'type_id')) {
+            Schema::table('cryptatech_seat_srp_srp', function (Blueprint $table) {
                 $table->bigInteger('type_id')->after('cost');
 
                 $table->index('type_id');
@@ -52,7 +52,7 @@ class CreateDenggarrInsurancesTable extends Migration
 
     public function down()
     {
-        if (Schema::hasTable('denngarr_srp_insurances'))
-            Schema::drop('denngarr_srp_insurances');
+        if (Schema::hasTable('cryptatech_srp_insurances'))
+            Schema::drop('cryptatech_srp_insurances');
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 Route::group([
-    'namespace' => 'Denngarr\Seat\SeatSrp\Http\Controllers',
+    'namespace' => 'CryptaTech\Seat\SeatSrp\Http\Controllers',
     'middleware' => ['web', 'auth'],
     'prefix' => 'api/v2/srp/metrics/web',
 ], function () {
@@ -28,7 +28,7 @@ Route::group([
 });
 
 Route::group([
-    'namespace' => 'Denngarr\Seat\SeatSrp\Http\Controllers',
+    'namespace' => 'CryptaTech\Seat\SeatSrp\Http\Controllers',
     'middleware' => ['api.auth'],
     'prefix' => 'api/v2/srp/metrics',
 ], function () {
@@ -54,7 +54,7 @@ Route::group([
 });
 
 Route::group([
-    'namespace' => 'Denngarr\Seat\SeatSrp\Http\Controllers',
+    'namespace' => 'CryptaTech\Seat\SeatSrp\Http\Controllers',
     'prefix' => 'srp',
 ], function () {
 

@@ -5,10 +5,10 @@
  * Time: 19:43.
  */
 
-namespace Denngarr\Seat\SeatSrp\Models\Eve;
+namespace CryptaTech\Seat\SeatSrp\Models\Eve;
 
-use Denngarr\Seat\SeatSrp\Models\KillMail;
-use Denngarr\Seat\SeatSrp\Models\Sde\InvType;
+use CryptaTech\Seat\SeatSrp\Models\KillMail;
+use CryptaTech\Seat\SeatSrp\Models\Sde\InvType;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,7 +19,7 @@ class Insurance extends Model
 
     public $incrementing = false;
 
-    protected $table = 'denngarr_srp_insurances';
+    protected $table = 'cryptatech_srp_insurances';
 
     protected $fillable = [
         'type_id', 'name', 'cost', 'payout',
@@ -42,7 +42,7 @@ class Insurance extends Model
         return $kill_mail->cost - $this->refunded();
     }
 
-    protected function setKeysForSaveQuery(Builder $query) {
+    protected function setKeysForSaveQuery($query) {
 
         if (is_array($this->getKeyName())) {
 

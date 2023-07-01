@@ -1,9 +1,9 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp;
+namespace CryptaTech\Seat\SeatSrp;
 
-use Denngarr\Seat\SeatSrp\Commands\FlagShim;
-use Denngarr\Seat\SeatSrp\Commands\InsuranceUpdate;
+use CryptaTech\Seat\SeatSrp\Commands\FlagShim;
+use CryptaTech\Seat\SeatSrp\Commands\InsuranceUpdate;
 use Seat\Services\AbstractSeatPlugin;
 
 class SrpServiceProvider extends AbstractSeatPlugin
@@ -155,6 +155,6 @@ class SrpServiceProvider extends AbstractSeatPlugin
      */
     public function getPackagistVendorName(): string
     {
-        return 'denngarr';
+        return 'cryptatech';
     }
 }

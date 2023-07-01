@@ -1,10 +1,10 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Http\Controllers;
+namespace CryptaTech\Seat\SeatSrp\Http\Controllers;
 
-use Denngarr\Seat\SeatSrp\Helpers\SrpManager;
-use Denngarr\Seat\SeatSrp\Models\KillMail;
-use Denngarr\Seat\SeatSrp\Validation\AddKillMail;
+use CryptaTech\Seat\SeatSrp\Helpers\SrpManager;
+use CryptaTech\Seat\SeatSrp\Models\KillMail;
+use CryptaTech\Seat\SeatSrp\Validation\AddKillMail;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Seat\Eveapi\Jobs\Killmails\Detail;
@@ -43,7 +43,7 @@ class SrpController extends Controller
         ]);
 
         if (! KillmailDetail::find($killmail->killmail_id))
-                    Detail::dispatchNow($killmail->killmail_id, $killmail->killmail_hash);
+                    Detail::dispatchSync($killmail->killmail_id, $killmail->killmail_hash);
 
         $totalKill = [];
 

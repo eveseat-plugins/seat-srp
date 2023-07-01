@@ -1,15 +1,15 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Http\Controllers;
+namespace CryptaTech\Seat\SeatSrp\Http\Controllers;
 
-use Denngarr\Seat\SeatSrp\Models\KillMail;
+use CryptaTech\Seat\SeatSrp\Models\KillMail;
 use Seat\Api\Http\Controllers\Api\v2\ApiController;
 use Seat\Web\Models\User;
 
 /**
  * Class SrpMetricsApiController.
  *
- * @package Denngarr\Seat\SeatSrp\Http\Controllers
+ * @package CryptaTech\Seat\SeatSrp\Http\Controllers
  */
 class SrpMetricsApiController extends ApiController
 {

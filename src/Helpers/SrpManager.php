@@ -1,10 +1,10 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Helpers;
+namespace CryptaTech\Seat\SeatSrp\Helpers;
 
-use Denngarr\Seat\SeatSrp\Models\AdvRule;
-use Denngarr\Seat\SeatSrp\Models\Eve\Insurance;
-use Denngarr\Seat\SeatSrp\Models\Sde\InvFlag;
+use CryptaTech\Seat\SeatSrp\Models\AdvRule;
+use CryptaTech\Seat\SeatSrp\Models\Eve\Insurance;
+use CryptaTech\Seat\SeatSrp\Models\Sde\InvFlag;
 use Exception;
 use GuzzleHttp\Client;
 use Seat\Eveapi\Models\Character\CharacterInfo;
@@ -94,7 +94,7 @@ trait SrpManager
     {
         // Switching logic between advanced and simple rules
         // Try advanced first, becasue if the setting hasnt been set it will be empty.
-        if (setting('denngarr_seat_srp_advanced_srp', true) == '1') {
+        if (setting('cryptatech_seat_srp_advanced_srp', true) == '1') {
             return $this->srpGetAdvancedPrice($killmail, $priceList);
         }
 
@@ -201,12 +201,12 @@ trait SrpManager
     {
 
         $source = 'evepraisal';
-        $base_value = setting('denngarr_seat_srp_advrule_def_base', true) ? setting('denngarr_seat_srp_advrule_def_base', true) : 0;
-        $hull_percent = setting('denngarr_seat_srp_advrule_def_hull', true) ? setting('denngarr_seat_srp_advrule_def_hull', true) / 100 : 0;
-        $fit_percent = setting('denngarr_seat_srp_advrule_def_fit', true) ? setting('denngarr_seat_srp_advrule_def_fit', true) / 100 : 0;
-        $cargo_percent = setting('denngarr_seat_srp_advrule_def_cargo', true) ? setting('denngarr_seat_srp_advrule_def_cargo', true) / 100 : 0;
-        $deduct_insurance = setting('denngarr_seat_srp_advrule_def_ins', true) ? setting('denngarr_seat_srp_advrule_def_ins', true) : 0;
-        $price_cap = setting('denngarr_seat_srp_advrule_def_price_cap', true) ? intval(setting('denngarr_seat_srp_advrule_def_price_cap', true)) : null;
+        $base_value = setting('cryptatech_seat_srp_advrule_def_base', true) ? setting('cryptatech_seat_srp_advrule_def_base', true) : 0;
+        $hull_percent = setting('cryptatech_seat_srp_advrule_def_hull', true) ? setting('cryptatech_seat_srp_advrule_def_hull', true) / 100 : 0;
+        $fit_percent = setting('cryptatech_seat_srp_advrule_def_fit', true) ? setting('cryptatech_seat_srp_advrule_def_fit', true) / 100 : 0;
+        $cargo_percent = setting('cryptatech_seat_srp_advrule_def_cargo', true) ? setting('cryptatech_seat_srp_advrule_def_cargo', true) / 100 : 0;
+        $deduct_insurance = setting('cryptatech_seat_srp_advrule_def_ins', true) ? setting('cryptatech_seat_srp_advrule_def_ins', true) : 0;
+        $price_cap = setting('cryptatech_seat_srp_advrule_def_price_cap', true) ? intval(setting('cryptatech_seat_srp_advrule_def_price_cap', true)) : null;
 
         $deduct_insurance = $deduct_insurance == '1' ? true : false;
 

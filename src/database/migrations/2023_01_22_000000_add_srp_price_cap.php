@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Schema\Blueprint;
 
-class AddPriceCap extends Migration
+class AddSrpPriceCap extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AddPriceCap extends Migration
      */
     public function up()
     {
-        Schema::table('denngarr_seat_srp_advrule', function (Blueprint $table) {
+        Schema::table('cryptatech_seat_srp_advrule', function (Blueprint $table) {
             $table->integer('srp_price_cap')->unsigned()->nullable();
         });
     }
@@ -25,7 +25,7 @@ class AddPriceCap extends Migration
      */
     public function down()
     {
-        Schema::table('denngarr_seat_srp_advrule', function (Blueprint $table) {
+        Schema::table('cryptatech_seat_srp_advrule', function (Blueprint $table) {
             $table->dropColumn('srp_price_cap');
         });
     }

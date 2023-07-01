@@ -5,10 +5,10 @@
  * Time: 20:42.
  */
 
-namespace Denngarr\Seat\SeatSrp\Models;
+namespace CryptaTech\Seat\SeatSrp\Models;
 
-use Denngarr\Seat\SeatSrp\Models\Sde\InvType;
-use Denngarr\Seat\SeatSrp\Notifications\SrpRequestSubmitted;
+use CryptaTech\Seat\SeatSrp\Models\Sde\InvType;
+use CryptaTech\Seat\SeatSrp\Notifications\SrpRequestSubmitted;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Seat\Eveapi\Models\Killmails\Killmail as EveKillmail;
@@ -26,7 +26,7 @@ class KillMail extends Model
 
     protected $primaryKey = 'kill_id';
 
-    protected $table = 'seat_srp_srp';
+    protected $table = 'cryptatech_seat_srp_srp';
 
     protected $fillable = [
         'user_id', 'kill_id', 'character_name', 'kill_token', 'approved', 'cost', 'type_id', 'ship_type', 'approver',
@@ -37,7 +37,7 @@ class KillMail extends Model
         parent::boot();
 
         self::created(function ($model) {
-            if(setting('denngarr_seat_srp_webhook_url', true) != ''){
+            if(setting('cryptatech_seat_srp_webhook_url', true) != ''){
                 $model->notify(new SrpRequestSubmitted());
             }
         });

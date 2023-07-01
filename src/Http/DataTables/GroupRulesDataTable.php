@@ -20,9 +20,10 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-namespace Denngarr\Seat\SeatSrp\Http\DataTables;
+namespace CryptaTech\Seat\SeatSrp\Http\DataTables;
 
-use Denngarr\Seat\SeatSrp\Models\AdvRule;
+use Illuminate\Http\JsonResponse;
+use CryptaTech\Seat\SeatSrp\Models\AdvRule;
 use Seat\Eveapi\Models\Sde\InvType;
 use Yajra\DataTables\Services\DataTable;
 
@@ -36,7 +37,7 @@ class GroupRulesDataTable extends DataTable
     /**
      * @return \Illuminate\Http\JsonResponse
      */
-    public function ajax()
+    public function ajax(): JsonResponse
     {
         return datatables()
             ->eloquent($this->query())
@@ -53,7 +54,7 @@ class GroupRulesDataTable extends DataTable
                 return $row->deduct_insurance > 0 ? 'Yes' : 'No';
             })
             ->rawColumns(['group', 'action'])
-            ->make(true);
+            ->toJson();
     }
 
     /**

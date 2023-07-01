@@ -13,7 +13,7 @@ class AddApproverName extends Migration
      */
     public function up()
     {
-        Schema::table('seat_srp_srp', function (Blueprint $table) {
+        Schema::table('cryptatech_seat_srp_srp', function (Blueprint $table) {
             $table->string('approver')->nullable();
         });
     }
@@ -25,7 +25,7 @@ class AddApproverName extends Migration
      */
     public function down()
     {
-        Schema::table('seat_srp_srp', function (Blueprint $table) {
+        Schema::table('cryptatech_seat_srp_srp', function (Blueprint $table) {
             $table->dropColumn('approver');
         });
     }

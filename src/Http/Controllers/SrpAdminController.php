@@ -1,15 +1,15 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Http\Controllers;
+namespace CryptaTech\Seat\SeatSrp\Http\Controllers;
 
-use Denngarr\Seat\SeatSrp\Http\DataTables\GroupRulesDataTable;
-use Denngarr\Seat\SeatSrp\Http\DataTables\TypeRulesDataTable;
-use Denngarr\Seat\SeatSrp\Models\AdvRule;
-use Denngarr\Seat\SeatSrp\Models\KillMail;
-use Denngarr\Seat\SeatSrp\Validation\AddReason;
-use Denngarr\Seat\SeatSrp\Validation\ValidateAdvancedSettings;
-use Denngarr\Seat\SeatSrp\Validation\ValidateRule;
-use Denngarr\Seat\SeatSrp\Validation\ValidateSettings;
+use CryptaTech\Seat\SeatSrp\Http\DataTables\GroupRulesDataTable;
+use CryptaTech\Seat\SeatSrp\Http\DataTables\TypeRulesDataTable;
+use CryptaTech\Seat\SeatSrp\Models\AdvRule;
+use CryptaTech\Seat\SeatSrp\Models\KillMail;
+use CryptaTech\Seat\SeatSrp\Validation\AddReason;
+use CryptaTech\Seat\SeatSrp\Validation\ValidateAdvancedSettings;
+use CryptaTech\Seat\SeatSrp\Validation\ValidateRule;
+use CryptaTech\Seat\SeatSrp\Validation\ValidateSettings;
 use Seat\Eveapi\Jobs\Killmails\Detail;
 use Seat\Eveapi\Models\Killmails\Killmail as EveKillmail;
 use Seat\Eveapi\Models\Killmails\KillmailDetail;
@@ -89,9 +89,9 @@ class SrpAdminController extends Controller
 
     public function saveSrpSettings(ValidateSettings $request)
     {
-        setting(['denngarr_seat_srp_webhook_url', $request->webhook_url], true);
-        setting(['denngarr_seat_srp_mention_role', $request->mention_role], true);
-        setting(['denngarr_seat_srp_advanced_srp', $request->srp_method], true);
+        setting(['cryptatech_seat_srp_webhook_url', $request->webhook_url], true);
+        setting(['cryptatech_seat_srp_mention_role', $request->mention_role], true);
+        setting(['cryptatech_seat_srp_advanced_srp', $request->srp_method], true);
 
         return redirect()->back()->with('success', 'SRP Settings have successfully been updated.');
     }
@@ -140,19 +140,19 @@ class SrpAdminController extends Controller
     public function saveAdvDefaultSettings(ValidateAdvancedSettings $request)
     {
 
-        setting(['denngarr_seat_srp_advrule_def_source', $request->default_source], true);
-        setting(['denngarr_seat_srp_advrule_def_base', $request->default_base], true);
-        setting(['denngarr_seat_srp_advrule_def_hull', $request->default_hull_pc], true);
-        setting(['denngarr_seat_srp_advrule_def_fit', $request->default_fit_pc], true);
-        setting(['denngarr_seat_srp_advrule_def_cargo', $request->default_cargo_pc], true);
-        setting(['denngarr_seat_srp_advrule_def_price_cap', $request->default_price_cap], true);
+        setting(['cryptatech_seat_srp_advrule_def_source', $request->default_source], true);
+        setting(['cryptatech_seat_srp_advrule_def_base', $request->default_base], true);
+        setting(['cryptatech_seat_srp_advrule_def_hull', $request->default_hull_pc], true);
+        setting(['cryptatech_seat_srp_advrule_def_fit', $request->default_fit_pc], true);
+        setting(['cryptatech_seat_srp_advrule_def_cargo', $request->default_cargo_pc], true);
+        setting(['cryptatech_seat_srp_advrule_def_price_cap', $request->default_price_cap], true);
 
         $insurance = 1;
         if (is_null($request->default_ins)) {
             $insurance = 0;
         }
 
-        setting(['denngarr_seat_srp_advrule_def_ins', $insurance], true);
+        setting(['cryptatech_seat_srp_advrule_def_ins', $insurance], true);
 
         return redirect()->back()->with('success', 'SRP Settings have successfully been updated.');
     }

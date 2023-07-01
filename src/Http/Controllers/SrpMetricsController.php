@@ -1,8 +1,8 @@
 <?php
 
-namespace Denngarr\Seat\SeatSrp\Http\Controllers;
+namespace CryptaTech\Seat\SeatSrp\Http\Controllers;
 
-use Denngarr\Seat\SeatSrp\Models\KillMail;
+use CryptaTech\Seat\SeatSrp\Models\KillMail;
 use Seat\Web\Http\Controllers\Controller;
 
 class SrpMetricsController extends Controller

@@ -5,9 +5,9 @@
  * Time: 19:51.
  */
 
-namespace Denngarr\Seat\SeatSrp\Commands;
+namespace CryptaTech\Seat\SeatSrp\Commands;
 
-use Denngarr\Seat\SeatSrp\Jobs\UpdateEsiInsurance;
+use CryptaTech\Seat\SeatSrp\Jobs\UpdateEsiInsurance;
 use Illuminate\Console\Command;
 
 class InsuranceUpdate extends Command

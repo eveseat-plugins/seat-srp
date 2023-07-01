@@ -5,7 +5,7 @@
  * Time: 20:42.
  */
 
-namespace Denngarr\Seat\SeatSrp\Models;
+namespace CryptaTech\Seat\SeatSrp\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Seat\Eveapi\Models\Killmails\Killmail;
@@ -24,7 +24,7 @@ class Quote extends Model
 
     protected $primaryKey = 'id';
 
-    protected $table = 'denngarr_seat_srp_advrule';
+    protected $table = 'cryptatech_seat_srp_quote';
 
     protected $fillable = [
         'killmail_id', 'user', 'value',

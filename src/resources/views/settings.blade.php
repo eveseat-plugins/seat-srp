@@ -24,7 +24,7 @@
                             <label for="webhook_url" class="col-sm-3 col-form-label">Webhook URL</label>
                             <div class="col-sm-8">
                                 <div class="input-group col-sm">
-                                    <input class="form-control" type="text" name="webhook_url" id="webhook_url" size="32" value="{{ setting('denngarr_seat_srp_webhook_url', true) }}" />
+                                    <input class="form-control" type="text" name="webhook_url" id="webhook_url" size="32" value="{{ setting('cryptatech_seat_srp_webhook_url', true) }}" />
                                 </div>
                             </div>
                         </div>
@@ -32,14 +32,14 @@
                             <label for="mention_role" class="col-sm-3 col-form-label">Discord Mention Role</label>
                             <div class="col-sm-8">
                                 <div class="input-group col-sm">
-                                    <input class="form-control" type="text" name="mention_role" id="mention_role" size="32" value="{{ setting('denngarr_seat_srp_mention_role', true) }}" />
+                                    <input class="form-control" type="text" name="mention_role" id="mention_role" size="32" value="{{ setting('cryptatech_seat_srp_mention_role', true) }}" />
                                 </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="srp_method" class="col-sm-3 col-form-label">SRP Method</label>
                             <div class="form-check form-check-inline">
-                                @if (setting('denngarr_seat_srp_advanced_srp', true) == "0")
+                                @if (setting('cryptatech_seat_srp_advanced_srp', true) == "0")
                                 <input class="form-check-input" type="radio" name="srp_method" id="method1" value="0" checked>
                                 @else
                                 <input class="form-check-input" type="radio" name="srp_method" id="method1" value="0">
@@ -47,7 +47,7 @@
                                 <label class="form-check-label" for="method1">Simple</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                @if (setting('denngarr_seat_srp_advanced_srp', true) == "1")
+                                @if (setting('cryptatech_seat_srp_advanced_srp', true) == "1")
                                 <input class="form-check-input" type="radio" name="srp_method" id="method2" value="1" checked>
                                 @else
                                 <input class="form-check-input" type="radio" name="srp_method" id="method2" value="1">
@@ -354,7 +354,7 @@
                                 <div class="form-group col-md">
                                     <label for="default_base">Base Value</label>
                                     <div class="input-group mb-3">
-                                        <input type="number" name="default_base" class="form-control" id="default_base" value="{{ setting('denngarr_seat_srp_advrule_def_base', true) }}" required>
+                                        <input type="number" name="default_base" class="form-control" id="default_base" value="{{ setting('cryptatech_seat_srp_advrule_def_base', true) }}" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text">ISK</span>
                                         </div>
@@ -364,7 +364,7 @@
                                 <div class="form-group col-md">
                                     <label for="default_hull_pc">Hull %</label>
                                     <div class="input-group mb-3">
-                                        <input type="number" name="default_hull_pc" class="form-control" id="default_hull_pc" value="{{ setting('denngarr_seat_srp_advrule_def_hull', true) }}" required>
+                                        <input type="number" name="default_hull_pc" class="form-control" id="default_hull_pc" value="{{ setting('cryptatech_seat_srp_advrule_def_hull', true) }}" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text">%</span>
                                         </div>
@@ -374,7 +374,7 @@
                                 <div class="form-group col-md">
                                     <label for="default_fit_pc">Fit %</label>
                                     <div class="input-group mb-3">
-                                        <input type="number" name="default_fit_pc" class="form-control" id="default_fit_pc" value="{{ setting('denngarr_seat_srp_advrule_def_fit', true) }}" required>
+                                        <input type="number" name="default_fit_pc" class="form-control" id="default_fit_pc" value="{{ setting('cryptatech_seat_srp_advrule_def_fit', true) }}" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text">%</span>
                                         </div>
@@ -384,7 +384,7 @@
                                 <div class="form-group col-md">
                                     <label for="default_cargo_pc">Cargo %</label>
                                     <div class="input-group mb-3">
-                                        <input type="number" name="default_cargo_pc" class="form-control" id="default_cargo_pc" value="{{ setting('denngarr_seat_srp_advrule_def_cargo', true) }}" required>
+                                        <input type="number" name="default_cargo_pc" class="form-control" id="default_cargo_pc" value="{{ setting('cryptatech_seat_srp_advrule_def_cargo', true) }}" required>
                                         <div class="input-group-append">
                                             <span class="input-group-text">%</span>
                                         </div>
@@ -394,7 +394,7 @@
                                 <div class="form-group col-md">
                                     <label for="default_price_cap">Price Cap</label>
                                     <div class="input-group mb-3">
-                                        <input type="number" name="default_price_cap" class="form-control" id="default_price_cap" min="0" step="1" value="{{ setting('denngarr_seat_srp_advrule_def_price_cap', true) }}">
+                                        <input type="number" name="default_price_cap" class="form-control" id="default_price_cap" min="0" step="1" value="{{ setting('cryptatech_seat_srp_advrule_def_price_cap', true) }}">
                                         <div class="input-group-append">
                                             <span class="input-group-text">ISK</span>
                                         </div>
@@ -404,7 +404,7 @@
                                 <div class="form-group col-md">
                                     <label for="default_ins">Deduct Insurance?</label>
                                     <div class="input-group mt-2 ml-3">
-                                        @if (setting('advrule_def_ins', true) == "1")
+                                        @if (setting('cryptatech_seat_srp_advrule_def_ins', true) == "1")
                                         <input type="checkbox" class="" name="default_ins" id="default_ins" checked>
                                         @else
                                         <input type="checkbox" class="" name="default_ins" id="default_ins">
@@ -647,7 +647,7 @@
             minimumResultsForSearch: 10,
         });
 
-        $('#default_source').value = "{{ setting('denngarr_seat_srp_advrule_def_source', true) }}";
+        $('#default_source').value = "{{ setting('cryptatech_seat_srp_advrule_def_source', true) }}";
 
     });
 
