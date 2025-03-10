@@ -4,7 +4,7 @@ A module for SeAT that tracks SRP requests
 This plugin write for [SeAT](https://github.com/eveseat/seat) is providing to your instance a way to manage your ship replacement program (SRP)
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/cryptatech/seat-srp.svg?style=flat-square)]()
-[![License](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](https://raw.githubusercontent.com/crypta-tech/seat-srp/master/LICENSE)
+[![License](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](https://raw.githubusercontent.com/eveseat-plugins/seat-srp/master/LICENSE)
 
 If you have issues with this, you can contact me on Eve as **Crypta Electrica**, or on email as 'crypta@crypta.tech'
 

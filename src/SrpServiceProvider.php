@@ -131,7 +131,7 @@ class SrpServiceProvider extends AbstractSeatPlugin
      */
     public function getPackageRepositoryUrl(): string
     {
-        return 'https://github.com/dysath/seat-srp';
+        return 'https://github.com/eveseat-plugins/seat-srp';
     }
 
     /**
