@@ -136,9 +136,9 @@ trait SrpManager
 
         $source = $rule->price_source;
         $base_value = $rule->base_value;
-        $hull_percent = $rule->hull_percent;
-        $fit_percent = $rule->fit_percent;
-        $cargo_percent = $rule->cargo_percent;
+        $hull_percent = $rule->hull_percent / 100;
+        $fit_percent = $rule->fit_percent / 100;
+        $cargo_percent = $rule->cargo_percent / 100;
         $deduct_insurance = $rule->deduct_insurance;
         $price_cap = $rule->srp_price_cap;
 
