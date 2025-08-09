@@ -35,7 +35,7 @@ class UpdateEsiInsurance extends EsiBase
 
     public function handle() {
 
-        $insurance = $this->retrieve();
+        $insurance = $this->retrieve()->getBody();
 
         foreach ($insurance as $entry) {
 
