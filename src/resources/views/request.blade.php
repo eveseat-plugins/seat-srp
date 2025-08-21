@@ -361,29 +361,29 @@
 
                     if (slot.indexOf('HiSlot') >= 0)
                         $('#highSlots').find('tbody').append(
-                            "<tr><td><img src='https://image.eveonline.com/Type/" + result[slot].id + "_32.png' height='16' />" + result[slot].name + "</td></tr>");
+                            "<tr><td><img src='https://images.evetech.net/types/" + result[slot].id + "/icon?size=32' height='16' />" + result[slot].name + "</td></tr>");
 
                     if (slot.indexOf('MedSlot') >= 0)
                         $('#midSlots').find('tbody').append(
-                            "<tr><td><img src='https://image.eveonline.com/Type/" + result[slot].id + "_32.png' height='16' />" + result[slot].name + "</td></tr>");
+                            "<tr><td><img src='https://images.evetech.net/types/" + result[slot].id + "/icon?size=32' height='16' />" + result[slot].name + "</td></tr>");
 
                     if (slot.indexOf('LoSlot') >= 0)
                         $('#lowSlots').find('tbody').append(
-                            "<tr><td><img src='https://image.eveonline.com/Type/" + result[slot].id + "_32.png' height='16' />" + result[slot].name + "</td></tr>");
+                            "<tr><td><img src='https://images.evetech.net/types/" + result[slot].id + "/icon?size=32' height='16' />" + result[slot].name + "</td></tr>");
 
                     if (slot.indexOf('RigSlot') >= 0)
                         $('#rigs').find('tbody').append(
-                            "<tr><td><img src='https://image.eveonline.com/Type/" + result[slot].id + "_32.png' height='16' />" + result[slot].name + "</td></tr>");
+                            "<tr><td><img src='https://images.evetech.net/types/" + result[slot].id + "/icon?size=32' height='16' />" + result[slot].name + "</td></tr>");
 
                     if (slot.indexOf('cargo') >= 0)
                         for (item in result[slot])
                             $('#cargo').find('tbody').append(
-                                "<tr><td><img src='https://image.eveonline.com/Type/" + item + "_32.png' height='16' />" + result[slot][item].name + "</td><td>" + result[slot][item].qty + "</td></tr>");
+                                "<tr><td><img src='https://images.evetech.net/types/" + item + "/icon?size=32' height='16' />" + result[slot][item].name + "</td><td>" + result[slot][item].qty + "</td></tr>");
 
                     if (slot.indexOf('dronebay') >= 0) {
                         for (item in result[slot])
                             $('#drones').find('tbody').append(
-                                "<tr><td><img src='https://image.eveonline.com/Type/" + item + "_32.png' height='16' />" + result[slot][item].name + "</td><td>" + result[slot][item].qty + "</td></tr>");
+                                "<tr><td><img src='https://images.evetech.net/types/" + item + "/icon?size=32' height='16' />" + result[slot][item].name + "</td><td>" + result[slot][item].qty + "</td></tr>");
                     }
                 }
 
