@@ -213,9 +213,9 @@ trait SrpManager
 
         $source = setting('cryptatech_seat_srp_advrule_def_source', true) ? setting('cryptatech_seat_srp_advrule_def_source', true) : 0;
         $base_value = setting('cryptatech_seat_srp_advrule_def_base', true) ? setting('cryptatech_seat_srp_advrule_def_base', true) : 0;
-        $hull_percent = setting('cryptatech_seat_srp_advrule_def_hull', true) ? setting('cryptatech_seat_srp_advrule_def_hull', true) / 100 : 0;
-        $fit_percent = setting('cryptatech_seat_srp_advrule_def_fit', true) ? setting('cryptatech_seat_srp_advrule_def_fit', true) / 100 : 0;
-        $cargo_percent = setting('cryptatech_seat_srp_advrule_def_cargo', true) ? setting('cryptatech_seat_srp_advrule_def_cargo', true) / 100 : 0;
+        $hull_percent = setting('cryptatech_seat_srp_advrule_def_hull', true) ? setting('cryptatech_seat_srp_advrule_def_hull', true) : 0;
+        $fit_percent = setting('cryptatech_seat_srp_advrule_def_fit', true) ? setting('cryptatech_seat_srp_advrule_def_fit', true) : 0;
+        $cargo_percent = setting('cryptatech_seat_srp_advrule_def_cargo', true) ? setting('cryptatech_seat_srp_advrule_def_cargo', true) : 0;
         $deduct_insurance = setting('cryptatech_seat_srp_advrule_def_ins', true) ? setting('cryptatech_seat_srp_advrule_def_ins', true) : 0;
         $price_cap = setting('cryptatech_seat_srp_advrule_def_price_cap', true) ? intval(setting('cryptatech_seat_srp_advrule_def_price_cap', true)) : null;
 
