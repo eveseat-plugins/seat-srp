@@ -240,9 +240,9 @@ trait SrpManager
             'rule_type' => 'simple',
             'price_source' => setting('cryptatech_seat_srp_simple_source', true),
             'base_value' => 0,
-            'hull_percent' => 1,
-            'cargo_percent' => 1,
-            'fit_percent' => 1,
+            'hull_percent' => 100,
+            'cargo_percent' => 100,
+            'fit_percent' => 100,
             'deduct_insurance' => 0,
         ]);
 
