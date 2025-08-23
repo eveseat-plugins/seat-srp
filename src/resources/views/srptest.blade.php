@@ -155,9 +155,9 @@
                     // id_to_names();
                     $('#type').text(result["price"]["rule"]);
                     $('#base').text(result["price"]["base_value"].toLocaleString() + " ISK");
-                    $('#hull').text((result["price"]["hull_percent"]).toLocaleString() + " %");
-                    $('#fit').text((result["price"]["fit_percent"]).toLocaleString() + " %");
-                    $('#cargo').text((result["price"]["cargo_percent"]).toLocaleString() + " %");
+                    $('#hull').text((result["price"]["hull_percent"]*100).toLocaleString() + " %");
+                    $('#fit').text((result["price"]["fit_percent"]*100).toLocaleString() + " %");
+                    $('#cargo').text((result["price"]["cargo_percent"]*100).toLocaleString() + " %");
                     $('#insurance').text(result["price"]["deduct_insurance"]);
                     $('#error').text(result["price"]["error"]);
 
