@@ -37,13 +37,22 @@ class PriceableSRPItem extends EveType implements IPriceable
     public function getSRPCategory(): SRPCategoryEnum
     {
 
-        // Fitted Item
-        if ((($this->flag >= 11) && ($this->flag <= 34)) || ($this->flag == 87)) {
+        // Fitted Item + Rigs
+        //   11 - 34 = low/mid/high slots
+        //   87 = drone bay
+        //   92 - 99 = rig slots
+        //   125 - 132 = subsystems
+        //   158 = fighter bay
+        //   159 - 163 = fighter tubes
+        if ((($this->flag >= 11) && ($this->flag <= 34)) || ($this->flag == 87) || (($this->flag >= 92) && ($this->flag <= 99)) || (($this->flag >= 125) && ($this->flag <= 132)) || (($this->flag >= 158) && ($this->flag <= 163))) {
             return SRPCategoryEnum::FITTING;
         }
 
         // Cargo Items
-        if (($this->flag == 5) || ($this->flag == 155)) {
+        //   5 = cargo
+        //   155 = fleet hangar
+        //   177 = subsystem bay
+        if (($this->flag == 5) || ($this->flag == 155) || ($this->flag == 177)) {
             return SRPCategoryEnum::CARGO;
         }
 
