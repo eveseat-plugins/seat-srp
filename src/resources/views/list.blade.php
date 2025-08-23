@@ -60,7 +60,12 @@
                       </button>
 
                   </td>
-                  <td><span class='id-to-name' data-id="{{ $kill->character_name }}">{{ $kill->character_name }}</span></td>
+                  <td>
+                     <span class='id-to-name' data-id="{{ $kill->character_name }}">{{ $kill->character_name }}</span>
+                     <button type="button" class="copyText btn btn-xs btn-link" title="Copy name to clipboard" data-text-to-copy="{{ $kill->character_name }}">
+                        <i class="fa fa-copy"></i>
+                     </button>
+                  </td>
                   <td>
                   @if (!is_null($kill->user))
                   {{$kill->user->name}}
@@ -73,6 +78,9 @@
                       <button type="button" class="btn btn-xs btn-link" data-toggle="modal" data-target="#insurances" data-kill-id="{{ $kill->kill_id }}">
                           {{ number_format($kill->cost, 2) }} ISK
                       </button>
+                     <button type="button" class="copyText btn btn-xs btn-link" title="Copy price to clipboard" data-text-to-copy="{{ $kill->cost }}">
+                        <i class="fa fa-copy"></i>
+                     </button>
                   </td>
                   @if ($kill->approved === 0)
                     <td id="id-{{ $kill->kill_id }}"><span class="badge badge-warning">Pending</span></td>
@@ -377,6 +385,9 @@
         });
     });
 
+   $('.copyText').on('click', function() {
+      navigator.clipboard.writeText($(this).data('text-to-copy'));
+   });
 });
 </script>
 @endpush
